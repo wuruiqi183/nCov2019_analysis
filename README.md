@@ -1,28 +1,38 @@
-# 2019-nCov 新型冠状病毒 Python 数据分析
-简体中文 | [English](README.en.md)
 
-* 原始数据来源为[丁香园](https://3g.dxy.cn/newh5/view/pneumonia)。 
-* CSV 格式数据文件来源: https://github.com/BlankerL/DXY-2019-nCoV-Data CSV 数据文件由网络爬虫获得，每隔一段时间自动更新一次。
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 
-### 使用前提
+# nCov2019\_analysis
 
-* Pandas
-* 如果想要交互使用的话，要先安装 Python Notebook，否则不需要。
-* 中文字库缺省是 C:/Windows/Fonts/STFANGSO.TTF 。如果你的字库文件在其他地方，必须调用 utils.set_font(<字库文件>)，图形才可以正确显示汉字。 
+<!-- badges: start -->
 
+<!-- badges: end -->
 
-### 文件说明
-* [demo.ipynb](./src/demo.ipynb): 演示如何提取、整合数据，以及基本时序、横向分析作图
-* demo.html 和 demo.pdf: 对于没有安装 Python Notebook 的用户，可以用这些文档作为用户手册
-* death_rate.ipynb: 对武汉、湖北（除武汉）、全国（除湖北）的地区特异性分析
-* utils.py: 基本使用函数
+The goal of nCov2019\_analysis is to …
 
-例如
+<h4 align="center">
 
-```
-data = utils.load_chinese_data()  # 提取 CSV 实时数据
-daily_frm = utils.aggDaily(data)  # 整合成每日数据
-utils.tsplot_conf_dead_cured(daily_frm, title_prefix='全国')  # 画全国确诊、死亡、治愈时间序列图
-```
+**Code of Conduct**
 
-### 祝一切安好 
+</h4>
+
+<h6 align="center">
+
+Please note that the `nCov2019_analysis` project is released with a
+[Contributor Code of
+Conduct](https://github.com/JiaxiangBU/nCov2019_analysis/blob/master/CODE_OF_CONDUCT.md).<br>By
+contributing to this project, you agree to abide by its terms.
+
+</h6>
+
+<h4 align="center">
+
+**License**
+
+</h4>
+
+<h6 align="center">
+
+CC0 © [Jiaxiang
+Li](https://github.com/JiaxiangBU/nCov2019_analysis/blob/master/LICENSE.md)
+
+</h6>
