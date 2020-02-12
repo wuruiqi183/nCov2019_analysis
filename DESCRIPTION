@@ -1,5 +1,5 @@
 Package: nCov2019_analysis
-Version: 0.0.0.9000
+Version: 1.0.0
 Title: 2019-nCov Analysis
 Description: Visualize the infection in Shanghai and Guizhou
     province using Python and R.
