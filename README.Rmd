@@ -18,7 +18,32 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of nCov2019_analysis is to ...
+The goal of nCov2019_analysis is to visualize the infection in Shanghai and Guizhou province using Python and R.
+
+## How to use
+
+```bash
+make all
+```
+
+## Dependency
+
+1. Python 3.7.3
+1. R 3.6.0
+1. 1.2.5033
+
+## Example
+
+See more 
+
+1. [Shanghai infection](analysis/shanghai-ratios.md)
+1. [Guihzou infection](analysis/guizhou-ratios.md)
+
+
+```{r,child="analysis/shanghai-ratios.Rmd", echo=FALSE}
+```
+
+
 
 
 `r add2pkg::add_disclaimer("Jiaxiang Li")`
