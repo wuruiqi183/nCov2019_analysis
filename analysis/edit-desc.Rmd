@@ -1,0 +1,16 @@
+```{r}
+desc::desc_add_author("Jian", "Xu")
+desc::desc_add_author("Isaac","Lin")
+```
+
+```{r}
+desc::desc_set("Title", "2019-nCov Analysis")
+desc::desc_set("Description", "Visualize the infection in Shanghai and Guizhou province using Python and R.")
+```
+
+
+```{r}
+desc::desc_reformat_fields()
+```
+
+
