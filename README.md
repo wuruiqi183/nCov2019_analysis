@@ -5,6 +5,7 @@
 
 <!-- badges: start -->
 
+[![DOI](https://zenodo.org/badge/239410768.svg)](https://zenodo.org/badge/latestdoi/239410768)
 <!-- badges: end -->
 
 The goal of nCov2019\_analysis is to visualize the infection in Shanghai
@@ -42,6 +43,7 @@ See more
 dir_tree(".")
 #> .
 #> +-- analysis
+#> |   +-- edit-desc.Rmd
 #> |   +-- guizhou-ratios.html
 #> |   +-- guizhou-ratios.md
 #> |   +-- guizhou-ratios.Rmd
@@ -58,12 +60,14 @@ dir_tree(".")
 #> +-- data
 #> |   \-- daily.csv
 #> +-- DESCRIPTION
+#> +-- dev_history_r_pkg.R
 #> +-- dev_history_r_proj.R
 #> +-- LICENSE
 #> +-- LICENSE.md
 #> +-- Makefile
 #> +-- NAMESPACE
 #> +-- nCov2019_analysis.Rproj
+#> +-- NEWS.md
 #> +-- output
 #> |   +-- guizhou-growth-rate.png
 #> |   +-- pudong-growth-rate.png
@@ -84,6 +88,33 @@ dir_tree(".")
 #>     \-- __pycache__
 #>         \-- utils.cpython-37.pyc
 ```
+
+## Citations
+
+jianxu305, & Jiaxiang Li. (2020, February 12).
+JiaxiangBU/nCov2019\_analysis: nCov2019\_analysis 1.0.0 (Version
+v1.0.0). Zenodo. <http://doi.org/10.5281/zenodo.3665617>
+
+``` bibtex
+@software{jianxu305_2020_3665617,
+  author       = {jianxu305 and
+                  Jiaxiang Li},
+  title        = {{JiaxiangBU/nCov2019\_analysis: nCov2019\_analysis 
+                   1.0.0}},
+  month        = feb,
+  year         = 2020,
+  publisher    = {Zenodo},
+  version      = {v1.0.0},
+  doi          = {10.5281/zenodo.3665617},
+  url          = {https://doi.org/10.5281/zenodo.3665617}
+}
+```
+
+If you use nCov2019\_analysis, I would be very grateful if you can add a
+citation in your published work. By citing nCov2019\_analysis, beyond
+acknowledging the work, you contribute to make it more visible and
+guarantee its growing and sustainability. For citation, please use the
+BibTex or the citation content.
 
 <h4 align="center">
 
