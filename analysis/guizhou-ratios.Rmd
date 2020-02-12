@@ -1,10 +1,20 @@
+---
+title: "贵州疫情情况"
+output: github_document
+---
+
+```{r setup, echo = FALSE}
+knitr::opts_chunk$set(
+	fig.keep = "last",
+	message = FALSE,
+	warning = FALSE
+)
+```
+
+
 ```{r}
 library(tidyverse)
 library(fs)
-```
-
-```{r}
-dir_tree("..")
 ```
 
 ```{r}

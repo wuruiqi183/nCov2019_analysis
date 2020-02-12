@@ -1,28 +1,17 @@
----
-title: "上海疫情情况"
-output: github_document
----
+上海疫情情况
+================
 
-```{r setup, echo = FALSE}
-knitr::opts_chunk$set(
-	fig.keep = "last",
-	message = FALSE,
-	warning = FALSE
-)
-```
-
-
-```{r}
+``` r
 library(tidyverse)
 library(fs)
 ```
 
-```{r}
+``` r
 # "../src/utils.py"
 df <- read_csv("../data/daily.csv")
 ```
 
-```{r}
+``` r
 shanghai_df <- df %>%
     filter(lubridate::month(updateDate) >= 2) %>%
     filter(provinceName %>% str_detect('上海')) %>%
@@ -54,7 +43,7 @@ p1 <-
     add2ggplot::theme_grey_and_red()
 ```
 
-```{r}
+``` r
 p1 +
     geom_text(aes(
         label = glue::glue("{scales::percent(growth_rate)}\n(累计{confirmed})")
@@ -75,7 +64,9 @@ image_path <- "../output/shanghai-growth-rate.png"
 knitr::include_graphics(image_path)
 ```
 
-```{r}
+<img src="../output/shanghai-growth-rate.png" width="3000" />
+
+``` r
 bind_rows(shanghai_df %>% mutate(cityName = '上海市'), pudong_df) %>% 
     ggplot() +
     aes(x = updateDate, y = growth_rate, color = cityName) +
@@ -100,3 +91,4 @@ image_path <- "../output/pudong-growth-rate.png"
 knitr::include_graphics(image_path)
 ```
 
+<img src="../output/pudong-growth-rate.png" width="3000" />
