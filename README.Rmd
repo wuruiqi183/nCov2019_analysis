@@ -46,6 +46,12 @@ See more
 ```{r,child="analysis/shanghai-ratios.Rmd", echo=FALSE}
 ```
 
+## Structure
+
+```{r}
+dir_tree(".")
+```
+
 
 
 

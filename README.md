@@ -36,6 +36,55 @@ See more
 
 <img src="D:/work/nCov2019_analysis/output/pudong-growth-rate.png" width="100%" />
 
+## Structure
+
+``` r
+dir_tree(".")
+#> .
+#> +-- analysis
+#> |   +-- guizhou-ratios.html
+#> |   +-- guizhou-ratios.md
+#> |   +-- guizhou-ratios.Rmd
+#> |   +-- make_report.R
+#> |   +-- pull-data.R
+#> |   +-- pull-data.Rmd
+#> |   +-- shanghai-ratios.html
+#> |   +-- shanghai-ratios.md
+#> |   +-- shanghai-ratios.Rmd
+#> |   \-- shanghai-ratios_files
+#> |       \-- figure-gfm
+#> |           +-- unnamed-chunk-5-1.png
+#> |           \-- unnamed-chunk-6-1.png
+#> +-- data
+#> |   \-- daily.csv
+#> +-- DESCRIPTION
+#> +-- dev_history_r_proj.R
+#> +-- LICENSE
+#> +-- LICENSE.md
+#> +-- Makefile
+#> +-- NAMESPACE
+#> +-- nCov2019_analysis.Rproj
+#> +-- output
+#> |   +-- guizhou-growth-rate.png
+#> |   +-- pudong-growth-rate.png
+#> |   +-- qiannanzhou-growth-rate.png
+#> |   \-- shanghai-growth-rate.png
+#> +-- README.en.md
+#> +-- README.md
+#> +-- README.Rmd
+#> +-- refs
+#> |   \-- add.bib
+#> \-- src
+#>     +-- death_rate.ipynb
+#>     +-- demo.html
+#>     +-- demo.ipynb
+#>     +-- demo.pdf
+#>     +-- demo.py
+#>     +-- utils.py
+#>     \-- __pycache__
+#>         \-- utils.cpython-37.pyc
+```
+
 <h4 align="center">
 
 **Code of Conduct**
