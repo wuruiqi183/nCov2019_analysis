@@ -18,8 +18,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import utils   # some convenient functions
 
-get_ipython().run_line_magic('load_ext', 'autoreload')
-get_ipython().run_line_magic('autoreload', '2')
+# get_ipython().run_line_magic('load_ext', 'autoreload')
+# get_ipython().run_line_magic('autoreload', '2')
 
 
 # ## 1. 获取原始 CSV 数据
@@ -34,7 +34,7 @@ get_ipython().run_line_magic('autoreload', '2')
 
 
 def load_chinese_data2():
-    data = pd.read_csv("../../DXY-2019-nCoV-Data/csv/DXYArea.csv")
+    data = pd.read_csv("../DXY-2019-nCoV-Data/csv/DXYArea.csv")
     data['updateTime'] = pd.to_datetime(data['updateTime'])  # original type of updateTime after read_csv is 'str'
     data['updateDate'] = data['updateTime'].dt.date    # add date for daily aggregation
     # display basic info
@@ -87,92 +87,4 @@ daily_frm[daily_frm['cityName'] == '武汉'][['confirmed', 'dailyNew_confirmed',
 # In[17]:
 
 
-daily_frm.to_csv("../data/daily.csv")
-
-
-# ## 3. 数据查看
-
-# ### 3.1 提取部分信息
-
-# #### 用 provinceName 检索省级数据
-
-# In[8]:
-
-
-daily_frm[daily_frm['provinceName'] == '广东省']
-
-
-# #### 用 cityName 检索市级数据
-
-# In[9]:
-
-
-daily_frm[daily_frm['cityName'] == '武汉']
-
-
-# #### 用 updateDate 检索单日数据
-
-# In[10]:
-
-
-daily_frm[daily_frm['updateDate'] == pd.to_datetime('2020-01-27')]
-
-
-# ### 3.2 时序比较图 utils.tsplot_conf_dead_cured()
-
-# #### 全国累计确诊、每日新增确诊、死亡、治愈时间序列图
-
-# In[11]:
-
-
-fig = utils.tsplot_conf_dead_cured(daily_frm, title_prefix='全国')
-plt.show()
-
-
-# #### 单个省份的时间序列也很容易，只要把想要的省份数据检索出来作为输入就可以了
-
-# In[12]:
-
-
-province = '湖北省'   # 输入你所要的省份
-fig = utils.tsplot_conf_dead_cured(daily_frm[daily_frm['provinceName'] == province], title_prefix=province)
-plt.show()                                  
-
-
-# #### 单个城市用法也是一样的, 还可以使用 logy=True 画指数图，看人数是否指数增长
-
-# In[13]:
-
-
-city = '武汉'
-fig = utils.tsplot_conf_dead_cured(daily_frm[daily_frm['cityName'] == city], title_prefix=city, logy=True)
-plt.show()  
-
-
-# ### 3.3 横向比较图 utils.cross_sectional_bar()
-
-# #### 各省份在2月三号确诊数比较
-
-# In[14]:
-
-
-utils.cross_sectional_bar(daily_frm, '2020-02-03', col='confirmed', groupby='provinceName', title='各省确累计诊数比较')
-
-
-# #### 湖北省各地2月1号死亡数比较
-
-# In[15]:
-
-
-utils.cross_sectional_bar(daily_frm[daily_frm['provinceName'] == '湖北省'], '2020-02-01', col='dead', 
-                        groupby='cityName', title='湖北各地累计死亡人数比较')
-
-
-# #### 全国2月5日新增确诊最多的十个城市 （用 largestN 参数限制横条数目）
-
-# In[16]:
-
-
-utils.cross_sectional_bar(daily_frm, '2020-02-05', col='dailyNew_confirmed', 
-                        groupby='cityName', title='全国各市新增确诊人数前十', largestN=10)
-
+daily_frm.to_csv("data/daily.csv")
