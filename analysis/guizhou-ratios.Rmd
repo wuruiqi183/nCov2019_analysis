@@ -68,7 +68,7 @@ p1 +
     ) +
     scale_x_date(date_breaks = "1 day", date_labels = "%m-%d(周%w)") +
     theme(axis.text.x = element_text(angle = 90))
-image_path <- "../output/guizhou-growth-rate.png"
+image_path <- here::here("output/guizhou-growth-rate.png")
     ggsave(image_path,
            height = 5,
            width = 10)
@@ -93,7 +93,7 @@ bind_rows(guizhou_df %>% mutate(cityName = '贵州省'), qiannanzhou_df) %>%
     ) +
     scale_x_date(date_breaks = "1 day", date_labels = "%m-%d(周%w)") +
     theme(axis.text.x = element_text(angle = 90))
-image_path <- "../output/qiannanzhou-growth-rate.png"
+image_path <- here::here("output/qiannanzhou-growth-rate.png")
     ggsave(image_path,
            height = 5,
            width = 10)
