@@ -1,5 +1,6 @@
 ---
 output: github_document
+bibliography: refs/add.bib
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -19,6 +20,8 @@ knitr::opts_chunk$set(
 <!-- badges: end -->
 
 The goal of nCov2019_analysis is to visualize the infection in Shanghai and Guizhou province using Python and R.
+
+I borrow from the data downloading from @Isaac_Lin2020 and data manipulation from @Xu2020.
 
 ## How to use
 
@@ -46,4 +49,4 @@ See more
 
 
 
-`r add2pkg::add_disclaimer("Jiaxiang Li")`
+`r add2pkg::add_disclaimer("Jiaxiang Li and Jian Xu and Isaac Lin")`
