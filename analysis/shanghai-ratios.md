@@ -57,14 +57,14 @@ p1 +
     ) +
     scale_x_date(date_breaks = "1 day", date_labels = "%m-%d(周%w)") +
     theme(axis.text.x = element_text(angle = 90))
-image_path <- "../output/shanghai-growth-rate.png"
+image_path <- here::here("output/shanghai-growth-rate.png")
     ggsave(image_path,
            height = 5,
            width = 10)
 knitr::include_graphics(image_path)
 ```
 
-<img src="../output/shanghai-growth-rate.png" width="3000" />
+<img src="D:/work/nCov2019_analysis/output/shanghai-growth-rate.png" width="3000" />
 
 ``` r
 bind_rows(shanghai_df %>% mutate(cityName = '上海市'), pudong_df) %>% 
@@ -84,11 +84,11 @@ bind_rows(shanghai_df %>% mutate(cityName = '上海市'), pudong_df) %>%
     ) +
     scale_x_date(date_breaks = "1 day", date_labels = "%m-%d(周%w)") +
     theme(axis.text.x = element_text(angle = 90))
-image_path <- "../output/pudong-growth-rate.png"
+image_path <- here::here("output/pudong-growth-rate.png")
     ggsave(image_path,
            height = 5,
            width = 10)
 knitr::include_graphics(image_path)
 ```
 
-<img src="../output/pudong-growth-rate.png" width="3000" />
+<img src="D:/work/nCov2019_analysis/output/pudong-growth-rate.png" width="3000" />
