@@ -6,6 +6,10 @@
 <!-- badges: start -->
 
 [![DOI](https://zenodo.org/badge/239410768.svg)](https://zenodo.org/badge/latestdoi/239410768)
+[Rstudio ![Launch Rstudio
+Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JiaxiangBU/nCov2019_analysis/master?urlpath=rstudio)
+[Jupyter Lab ![Launch Rstudio
+Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JiaxiangBU/nCov2019_analysis/master?urlpath=lab)
 <!-- badges: end -->
 
 The goal of nCov2019\_analysis is to visualize the infection in Shanghai
